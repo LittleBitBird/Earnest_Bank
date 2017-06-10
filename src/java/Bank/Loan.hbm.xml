@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-9 16:25:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Bank.Loan" table="LOAN" schema="SA" optimistic-lock="version">
+        <id name="username" type="string">
+            <column name="USERNAME" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="loantype" type="string">
+            <column name="LOANTYPE" length="30" not-null="true" />
+        </property>
+        <property name="rates" type="string">
+            <column name="RATES" length="30" not-null="true" />
+        </property>
+        <property name="payment" type="big_decimal">
+            <column name="PAYMENT" precision="8" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="newTemplate.xhtml">
+            <ui:define name="content">
+                <br/> <br/> <br/> <br/>
+                <div align="center">
+        <div align="center" style="width: 400px;height: 246px;align-self: center" >
+            <h:form>
+                <br/><br/>
+                <table>
+                <tr>
+                    
+                    <td><br/>用户名：</td>
+                    <td><br/><h:inputText value="#{loginBean.username}" /></td>
+                
+                </tr>
+                
+                 <tr>
+                    
+                    <td><br/><br/>密码:</td>
+                    <td><br/><br/><h:inputSecret value="#{loginBean.password}"/></td>
+                
+                </tr>
+                
+                <tr>
+                    
+                    <td><br/><h:commandButton value="登陆" action="#{loginBean.Login}"/></td>
+                    <td align="right"><br/><h:commandButton value="注册" action="Registration"/></td>
+                
+                </tr>
+                    <tr>
+                    
+                        <td><br/><h:outputText style="color: red" value="#{loginBean.warn}"/>   </td>
+                   
+                </tr>
+            </table>
+                
+            </h:form>
+        </div>
+      </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

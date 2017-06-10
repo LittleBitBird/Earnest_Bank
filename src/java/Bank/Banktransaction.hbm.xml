@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-9 16:25:44 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="Bank.Banktransaction" table="BANKTRANSACTION" schema="SA" optimistic-lock="version">
+        <id name="accountid" type="string">
+            <column name="ACCOUNTID" length="30" />
+            <generator class="assigned" />
+        </id>
+        <property name="accountgetter" type="string">
+            <column name="ACCOUNTGETTER" length="30" not-null="true" />
+        </property>
+        <property name="accountsender" type="string">
+            <column name="ACCOUNTSENDER" length="30" not-null="true" />
+        </property>
+        <property name="banktransaction" type="string">
+            <column name="BANKTRANSACTION" length="30" not-null="true" />
+        </property>
+        <property name="transactiondate" type="date">
+            <column name="TRANSACTIONDATE" length="10" not-null="true" />
+        </property>
+          <property name="transactiondmoney" type="big_decimal">
+            <column name="TRANSACTIONMONEY" precision="8" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:lc="http://java.sun.com/jsf/composite/LoginControl"
+     >
+    <h:head>
+        <title>EARNEST BANK LTD</title>
+        <link href="./resources/ExternalStyleSheet.css" rel="stylesheet" type="text/css" />
+    </h:head>
+    <h:body>
+        <table border="0" bgcolor="Navy" align="top" width="100%" style="height:90px">
+            <tr>
+              <td bgcolor="Yellow" align="center"> <!--font color="Gold"-->
+                  <font style="font-family: 'SHOWCARD GOTHIC',sans-serif;"
+                            size="+4" color="Green">EARNEST BANK LTD®
+                  </font>
+                </td>
+                <td align="left" width="180">
+                </td>
+            </tr>
+        </table>
+        <table align="left" width="100%" style="height:450px">
+            <tr>
+            <td bgcolor="yellow"  width="20%" valign="top" align="center"> <br/><br/><br/>
+              <h:form>
+                <h:commandLink styleClass="fFormat" action="About Us" value="About us"/><br/><br/>
+                <h:commandLink styleClass="fFormat" action="Account details" value="account details"/><br/><br/>
+                <h:commandLink styleClass="fFormat" action="for Contact" value="transaction details"/><br/><br/>
+                <h:commandLink styleClass="fFormat" action="Order Book Online" value="loan"/><br/><br/>
+                <h:commandLink styleClass="fFormat" action="for Registration Form"  value="Registration"/><br/><br/>
+                <h:commandLink styleClass="fFormat" action="Book Details" value="Book Information"/><br/><br/>
+             </h:form>
+               
+           </td>
+           <td align="center"  bgcolor="white" width="50%" style="vertical-align: top;">
+               <ui:insert name="body"/>
+           </td>
+           <td align="center" width="30%" bgcolor="Navy">
+              <font color="#FFE4B5" size="3" face="FUTURA MD BT">
+                    Why use our bank?</font><br/>
+                    <p align="Left" style="font-family: 'GILL',HELVETICA, sans-serif; color: #FFE4B5;">
+                      * provide user with different types of accounts<br/>
+                      * support service online<br/>
+                      * provide various types of loan facilities<br/>
+                      * welcome new customers<br/>
+                      * Promotion schemes
+                    </p>
+                    <hr noshade="" size="1"/>
+                    <font color="#FFE4B5" size="3" face="FUTURA MD BT">
+                     Join the Bank
+                      </font>
+
+              <p align="left" style="font-family: 'GILL',HELVETICA, sans-serif; color: #FFE4B5">
+                 * Get serivce online <br/>
+                 * Get high interest rates<br/>
+              </p>
+
+              <hr noshade="" size="1"/>
+
+              <font color="#FFE4B5" size="3" face="FUTURA MD BT">
+                 Customer service
+              </font>
+
+              <p align="left" style="font-family: 'GILL',HELVETICA, sans-serif; color: #FFE4B5">
+                 * All orders are executed in the least possible time.<br/>
+                 * service all over the globe.<br/>
+
+                 * Multiple modes of payment are available.<br/>
+              </p>
+            </td>
+            </tr>
+      </table>
+    </h:body>
+</html>

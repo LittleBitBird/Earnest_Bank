@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <ui:composition template="newTemplate.xhtml">
+            <ui:define name="content">
+                <div align="center">
+                    <h:form>
+               <p align="center" style="font-family: 'GILL',HELVETICA, sans-serif;color: black;">
+                   <font face="FUTURA MD BT" color="GREEN" size="5">Transaction Information<br/><br/></font></p>
+                        <p>用户名：<h:inputText  onchange="submit()" valueChangeListener="#{transactionSearch.transaction}"/>  </p>
+            
+                        <h:dataTable value="#{transactionSearch.tran}" var="a" style="text-align: center">
+                <h:column>
+                    <f:facet name="header">&nbsp;账单号</f:facet>
+                    <h:outputText  value="#{a.accountid}" />
+                </h:column>
+                <h:column >
+                    <f:facet name="header"> &nbsp; 收款人</f:facet>
+                    <h:outputText  value="#{a.customergetname}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> &nbsp; 收款人账号</f:facet>
+                    <h:outputText value="#{a.bankaccountnumberGet}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> &nbsp; 发款人</f:facet>
+                    <h:outputText value="#{a.customersendname}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> &nbsp; 发款人账号</f:facet>
+                    <h:outputText value="#{a.bankaccountnumberSend}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> &nbsp; 事件</f:facet>
+                    <h:outputText value="#{a.banktransaction}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> &nbsp;日期</f:facet>
+                    <h:outputText value="#{a.transactiondate}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header"> &nbsp; 金额</f:facet>
+                    <h:outputText value="#{a.transactiondmoney}"/>
+                </h:column>
+            </h:dataTable>
+                </h:form>
+                </div>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

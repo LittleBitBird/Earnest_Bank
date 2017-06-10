@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+       <ui:composition template="newTemplate1.xhtml">
+            <ui:define name="content">
+                <p align="center" style="font-family: 'GILL',HELVETICA, sans-serif;color: black;">
+            <font face="FUTURA MD BT" color="GREEN" size="7">provide a loan<br/><br/></font>
+                  </p>
+                 <p align="center" style="font-family: 'GILL',HELVETICA, sans-serif;color: black;">
+            <font face="FUTURA MD BT" color="GREEN" size="7">若已有贷款则不必选择贷款类型<br/><br/></font>
+                  </p>
+                 <h:form>
+                    <table border="0"  align="center">
+                        
+                         <tr>
+                              <td><br/><font  size="3">贷款类型:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+                              <td><br/>&nbsp;<h:selectOneMenu  id="type" value="#{loanBean.loantype}">                                          
+                                     <f:selectItem itemValue="" itemLabel="" />
+                                     <f:selectItem itemValue="委托贷款" itemLabel="委托贷款" />
+                                  <f:selectItem itemValue="信用贷款" itemLabel="信用贷款" />
+                                  <f:selectItem itemValue="担保贷款" itemLabel="担保贷款" />     
+                                 </h:selectOneMenu>
+              </td>                         
+                        </tr>       
+                        
+                        <tr>
+                            <td><br/><font  size="3">贷款金额:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+                            <td><br/>&nbsp;<h:inputText id="name" value="#{loanBean.loanPayment}" required="true" requiredMessage="You must enter CumstomerName"/>
+                            <h:message for="name" style="color: red"/></td>
+                        </tr>
+                        <tr>
+                            <td ><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <h:commandButton value="提交" style="width:60px;height: 30px " action="#{loanBean.submit()}"/></td>
+                            <td align="right"><br/><br/><h:commandButton style="width:60px;height: 30px " value="重置" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        </tr>
+                         <tr>
+                             <td><br/><br/> <h:outputText value="#{registerBean.warm}"/></td>                            
+                        </tr>
+                    </table>
+                   
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

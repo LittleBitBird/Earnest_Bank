@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Book Information</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="newTemplate.xhtml">
+            <ui:define name="content">
+                <p align="center" style="font-family: 'GILL',HELVETICA, sans-serif;color: black;">
+            <font face="FUTURA MD BT" color="GREEN" size="5">Account Information<br/><br/></font>
+                
+        </p>
+                  <table border="0" width="30%" align="center">
+                         <h:form>
+                         <tr>
+                             <td>
+                                 input your username
+                             </td>
+                             <td>
+                                 :
+                             </td>
+                             <td align="center">
+                                 <h:inputText value="as" onchange="submit()" valueChangeListener="#{accountbean.autochange}"/>
+                             </td>
+                         </tr>
+                             <tr>
+                                 <td>
+                                     <br/>
+                                      account type  
+                                 </td>
+                                 <td>
+                                     <br/>
+                                 :
+                             </td>
+
+                                 <td align="center">
+                                     <br/>
+                                     <h:outputText value="#{accountbean.accounttype}" />
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     minimum balance amount
+                                 </td>
+                                 <td>
+                                 :
+                             </td>
+
+                                 <td align="center">
+                                     <h:outputText id="cdur" value="#{accountbean.balacnce}"/>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                      rates of interest
+                                 </td>
+                                 <td>
+                                 :
+                             </td>
+
+                                 <td align="center">
+                                     <h:outputText id="celig" value="#{accountbean.rate}"/>
+                                 </td>
+                             </tr>
+                            
+
+                         </h:form>
+                     </table>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+
